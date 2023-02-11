@@ -40,7 +40,6 @@ const openModalPicture = (e) => {
   };
 
   instance.show();
-  ``;
 };
 
 gallery.addEventListener("click", openModalPicture);
