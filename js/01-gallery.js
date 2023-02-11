@@ -29,13 +29,15 @@ const openModalPicture = (e) => {
   `,
     {
       onShow: () => document.body.addEventListener("keydown", closeOnESC),
+      onClose: () => document.body.removeEventListener("keydown", closeOnESC),
     }
   );
 
   const closeOnESC = (e) => {
     if (e.code === "Escape") {
+      console.log(e.code);
       instance.close();
-      document.body.removeEventListener("keydown", closeOnESC);
+      // document.body.removeEventListener("keydown", closeOnESC);
     }
   };
 
